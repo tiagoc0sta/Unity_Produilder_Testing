@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SimpleSampleCharacterControl : MonoBehaviour
 {
+    
+
     private enum ControlMode
     {
         /// <summary>
@@ -110,7 +112,10 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         {
             m_jumpInput = true;
         }
+
+        
     }
+
 
     private void FixedUpdate()
     {
