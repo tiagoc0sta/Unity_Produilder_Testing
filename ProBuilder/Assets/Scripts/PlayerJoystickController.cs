@@ -54,9 +54,9 @@ public class PlayerJoystickController : MonoBehaviour
         
         if (xAxis !=0 || yAxis !=0)
         {
-            float hoz = moveJoystick.Horizontal;
-            float ver = moveJoystick.Vertical;
-            Vector3 direction = new Vector3(-ver, 0, hoz).normalized;
+            float hoz = moveJoystick.Vertical;
+            float ver = moveJoystick.Horizontal;
+            Vector3 direction = new Vector3(-ver, 0, -hoz).normalized;
             transform.Translate(direction * 0.02f, Space.World);
             ChangeAnimationState("Walk");
         }
