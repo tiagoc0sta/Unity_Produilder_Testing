@@ -6,6 +6,7 @@ public class PlayerJoystickController : MonoBehaviour
 {
     public FixedJoystick moveJoystick;
 
+    [SerializeField] private float m_moveSpeed = 2;
 
     [SerializeField] private Animator m_animator = null;
 
@@ -57,7 +58,7 @@ public class PlayerJoystickController : MonoBehaviour
             float hoz = moveJoystick.Vertical;
             float ver = moveJoystick.Horizontal;
             Vector3 direction = new Vector3(-ver, 0, -hoz).normalized;
-            transform.Translate(direction * 0.02f, Space.World);
+            transform.Translate(direction * m_moveSpeed, Space.World);
             ChangeAnimationState("Walk");
         }
         else
