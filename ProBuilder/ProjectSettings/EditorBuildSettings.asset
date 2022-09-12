@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/RedLight.unity
+    guid: c4ba887f009c87448923481a9a87cc6d
   m_configObjects: {}
