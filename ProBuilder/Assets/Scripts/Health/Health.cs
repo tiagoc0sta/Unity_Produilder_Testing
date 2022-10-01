@@ -6,7 +6,6 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealht;
     public float currentHealth { get; private set; }
-    private Animator anim;
 
     private void Awake()
     {
@@ -26,5 +25,11 @@ public class Health : MonoBehaviour
         }
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(1);
+        }
+    }
 }
