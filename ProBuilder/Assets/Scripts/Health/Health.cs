@@ -5,11 +5,15 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealht;
+    private Animator anim;
+    private bool dead;
+
     public float currentHealth { get; private set; }
 
     private void Awake()
     {
         currentHealth = startingHealht;
+        anim = GetComponent<Animator>();
     }
 
     public void TakeDamage(float _damage)
@@ -18,18 +22,20 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
-            //player hurt
-        } else
+            anim.SetTrigger("hurt");
+        } 
+        else
         {
-            //player dead
+            if (!dead)
+            {
+                anim.SetTrigger("die");
+                GetComponent<PlayerJoystickController>().enabled = false;
+                dead = true;
+            }
+            
+
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(1);
-        }
-    }
+    
 }
