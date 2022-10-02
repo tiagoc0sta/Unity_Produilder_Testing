@@ -7,7 +7,6 @@ public class PlayerJoystickController : MonoBehaviour
     public FixedJoystick moveJoystick;
 
     [SerializeField] private float m_moveSpeed = 2;
-
     [SerializeField] private Animator m_animator = null;
 
     //Animation states

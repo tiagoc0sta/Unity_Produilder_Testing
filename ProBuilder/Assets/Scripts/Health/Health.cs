@@ -5,6 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealht;
+    [SerializeField] GameObject _player; // new
+
+
     private Animator anim;
     private bool dead;
 
@@ -28,9 +31,10 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
-                anim.SetTrigger("die");
-                GetComponent<PlayerJoystickController>().enabled = false;
-                dead = true;
+                //anim.SetTrigger("die");
+                _player.SetActive(false);
+                //GetComponent<PlayerJoystickController>().enabled = false;
+                //dead = true;
             }
             
 
