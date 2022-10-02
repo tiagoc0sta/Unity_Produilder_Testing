@@ -5826,7 +5826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79e235ada5a2e441a8fd3d474055b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealht: 3
+  startingHealht: 5
+  _player: {fileID: 344663132}
 --- !u!43 &350314652
 Mesh:
   m_ObjectHideFlags: 0
