@@ -13,5 +13,6 @@ public class PlayerInventory : MonoBehaviour
     {
         NumberofDiamonds++;
         OnDiamondCollected.Invoke(this);
+        Debug.Log("Player hit diamond");
     }
 }
