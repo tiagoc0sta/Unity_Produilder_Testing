@@ -16,3 +16,4 @@ public class PlayerInventory : MonoBehaviour
         Debug.Log("Player hit diamond");
     }
 }
+/// TEST player UI 
